@@ -84,6 +84,8 @@ var body: some View {
                        average3 = average3 / averageCount
                         average = String(average3)
                     }
+                    let maxnum = max(Int(gamein1)! , Int(gamein2)!, Int(gamein3)!)
+                    high = String(maxnum)
                     
                     
                 }){
