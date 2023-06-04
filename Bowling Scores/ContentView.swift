@@ -127,7 +127,7 @@ var body: some View {
                                 .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
                                 .background(Color.blue)
                                 .accessibilityLabel("average")
-                            Text("0")
+                            Text(high)
                                 .frame(width: 180.0, height: 20)
                                 .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
                                 .background(Color.blue)
