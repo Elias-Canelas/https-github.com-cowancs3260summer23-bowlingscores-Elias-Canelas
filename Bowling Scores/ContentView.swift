@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var gamein1: String = ""
-    @State var gamein2: String = ""
-    @State var gamein3: String = ""
     @State var series: String = ""
     @State var average: String = ""
     @State var high: String = ""
     @State var average3: Int = 0
     @State var averageCount: Int = 0
+    @State var gamein1: String = ""
+    @State var gamein2: String = ""
+    @State var gamein3: String = ""
     
 var body: some View {
         VStack{
@@ -65,7 +65,7 @@ var body: some View {
                     let series1 = Int(gamein1)! + Int(gamein2)! + Int(gamein3)!
                     series = String(series1)
                     
-                    if gamein1.isEmpty || gamein2.isEmpty || gamein3.isEmpty{
+                    if gamein1.isEmpty && gamein2.isEmpty && gamein3.isEmpty{
                         average = String("0")
                     }
                     else{
