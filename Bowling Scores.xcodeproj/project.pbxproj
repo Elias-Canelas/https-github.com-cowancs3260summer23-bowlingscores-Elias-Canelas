@@ -14,6 +14,8 @@
 		640154DD2A2BF42300E1C75E /* Bowling_ScoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640154DC2A2BF42300E1C75E /* Bowling_ScoresTests.swift */; };
 		640154E72A2BF42300E1C75E /* Bowling_ScoresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640154E62A2BF42300E1C75E /* Bowling_ScoresUITests.swift */; };
 		640154E92A2BF42300E1C75E /* Bowling_ScoresUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640154E82A2BF42300E1C75E /* Bowling_ScoresUITestsLaunchTests.swift */; };
+		64CB16762A2C5FE4001E9D3A /* Bowling ScoresUITestCS3260.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB16752A2C5FE4001E9D3A /* Bowling ScoresUITestCS3260.swift */; };
+		64CB16782A2C6043001E9D3A /* .github in Resources */ = {isa = PBXBuildFile; fileRef = 64CB16772A2C6043001E9D3A /* .github */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		640154E22A2BF42300E1C75E /* Bowling ScoresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bowling ScoresUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		640154E62A2BF42300E1C75E /* Bowling_ScoresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowling_ScoresUITests.swift; sourceTree = "<group>"; };
 		640154E82A2BF42300E1C75E /* Bowling_ScoresUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowling_ScoresUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64CB16752A2C5FE4001E9D3A /* Bowling ScoresUITestCS3260.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bowling ScoresUITestCS3260.swift"; sourceTree = "<group>"; };
+		64CB16772A2C6043001E9D3A /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		640154BF2A2BF42200E1C75E = {
 			isa = PBXGroup;
 			children = (
+				64CB16772A2C6043001E9D3A /* .github */,
 				640154CA2A2BF42200E1C75E /* Bowling Scores */,
 				640154DB2A2BF42300E1C75E /* Bowling ScoresTests */,
 				640154E52A2BF42300E1C75E /* Bowling ScoresUITests */,
@@ -123,6 +128,7 @@
 			children = (
 				640154E62A2BF42300E1C75E /* Bowling_ScoresUITests.swift */,
 				640154E82A2BF42300E1C75E /* Bowling_ScoresUITestsLaunchTests.swift */,
+				64CB16752A2C5FE4001E9D3A /* Bowling ScoresUITestCS3260.swift */,
 			);
 			path = "Bowling ScoresUITests";
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64CB16782A2C6043001E9D3A /* .github in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 			files = (
 				640154E92A2BF42300E1C75E /* Bowling_ScoresUITestsLaunchTests.swift in Sources */,
 				640154E72A2BF42300E1C75E /* Bowling_ScoresUITests.swift in Sources */,
+				64CB16762A2C5FE4001E9D3A /* Bowling ScoresUITestCS3260.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

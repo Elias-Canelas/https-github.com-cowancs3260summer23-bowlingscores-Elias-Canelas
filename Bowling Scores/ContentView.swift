@@ -8,14 +8,143 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    @State var gamein1: String = ""
+    @State var gamein2: String = ""
+    @State var gamein3: String = ""
+    @State var series: String = ""
+    @State var average: String = ""
+    @State var high: String = ""
+    @State var average3: Int = 0
+    @State var averageCount: Int = 0
+    
+var body: some View {
+        VStack{
+            VStack {
+                Text("Bowling Scores")
+                    .font(.title)
+                    .foregroundColor(Color.red)
+                
+                HStack{
+                    VStack{
+                        Text("Game 1")
+                            .padding(.trailing, 140.0)
+                            .frame(width: 200.0, height: 20.0)
+                            .border(Color.black, width: 1)
+                            .background(Color.yellow)
+                            .accessibilityLabel("game1label")
+                        Text("Game 2")
+                            .padding(.trailing, 140.0)
+                            .frame(width: 200.0, height: 20.0)
+                            .border(Color.black, width: 1)
+                            .background(Color.yellow)
+                            .accessibilityLabel("game2label")
+                        Text("Game 3")
+                            .padding(.trailing, 140.0)
+                            .frame(width: 200.0, height: 20.0)
+                            .border(Color.black, width: 1)
+                            .background(Color.yellow)
+                            .accessibilityLabel("game3label")
+                    }
+                    VStack{
+                        TextField("0", text: $gamein1)
+                            .background(Color.red)
+                            .multilineTextAlignment(.trailing)
+                            .accessibilityLabel("game1")
+                        TextField("0", text: $gamein2)
+                            .background(Color.red)
+                            .multilineTextAlignment(.trailing)
+                            .accessibilityLabel("game2")
+                        TextField("0", text: $gamein3)
+                            .background(Color.red)
+                            .multilineTextAlignment(.trailing)
+                            .accessibilityLabel("game3")
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                Button(action: {
+                    let series1 = Int(gamein1)! + Int(gamein2)! + Int(gamein3)!
+                    series = String(series1)
+                    
+                    if gamein1.isEmpty || gamein2.isEmpty || gamein3.isEmpty{
+                        average = String("0")
+                    }
+                    else{
+                        if Int(gamein1) == 0{
+                            average3 =  0 + Int(gamein1)!
+                            averageCount = 0 + 1
+                        }
+                        if Int(gamein2) == 0{
+                            average3 =  0 + Int(gamein2)!
+                            averageCount = 0 + 1
+                        }
+                        if Int(gamein3) == 0{
+                            average3 =  0 + Int(gamein3)!
+                            averageCount = 0 + 1
+                        }
+                       average3 = average3 / averageCount
+                        average = String(average3)
+                    }
+                    
+                    
+                }){
+                    Text("Calculate")
+                        .frame(width: 380, height: 20.0)
+                        .border(Color.black, width: 1)
+                        .background(Color.green)
+                        .accessibilityLabel("calculate")
+                }
+                HStack{
+                    VStack{
+                        Text("Series")
+                            .padding(.trailing, 140.0)
+                            .frame(width: 200.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0)
+                            .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
+                            .background(Color.yellow)
+                            .accessibilityLabel("serieslabel")
+                        Text("Average")
+                            .padding(.trailing, 130.0)
+                            .frame(width: 200.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0)
+                            .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
+                            .background(Color.yellow)
+                            .accessibilityLabel("averagelabel")
+                        Text("High")
+                            .padding(.trailing, 150.0)
+                            .frame(width: 200.0, height: 20)
+                            .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
+                            .background(Color.yellow)
+                            .accessibilityLabel("highlabel")
+                    }
+                    VStack{
+                        Text(series)
+                                .frame(width: 180.0, height: 20)
+                                .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
+                                .background(Color.blue)
+                                .accessibilityLabel("series")
+                            Text(average)
+                                .frame(width: 180.0, height: 20)
+                                .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
+                                .background(Color.blue)
+                                .accessibilityLabel("average")
+                            Text("0")
+                                .frame(width: 180.0, height: 20)
+                                .border(Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1)
+                                .background(Color.blue)
+                            .accessibilityLabel("high")
+                        
+                    
+                        
+                    }
+                }
+                .padding(.leading, 0.0)
+            }
+            
+            Spacer()
         }
-        .padding()
+        .frame(maxWidth: 380)
+        
+        
+    
+        
     }
 }
 
