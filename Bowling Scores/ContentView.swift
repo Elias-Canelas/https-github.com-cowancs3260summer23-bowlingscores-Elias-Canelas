@@ -66,22 +66,28 @@ var body: some View {
                     series = String(series1)
                     
                     if gamein1.isEmpty && gamein2.isEmpty && gamein3.isEmpty{
-                        average = String("0")
+                        average = "0"
                     }
                     else{
-                        if Int(gamein1) == 0{
-                            average3 =  0 + Int(gamein1)!
-                            averageCount = 0 + 1
+                        average3 = 0
+                        var averageCount = 0
+                        
+                        if Int(gamein1) != 0{
+                            average3 += Int(gamein1)!
+                            averageCount += 1
                         }
-                        if Int(gamein2) == 0{
-                            average3 =  0 + Int(gamein2)!
-                            averageCount = 0 + 1
+                        if Int(gamein2) != 0{
+                            average3 += Int(gamein2)!
+                            averageCount += 1
                         }
-                        if Int(gamein3) == 0{
-                            average3 =  0 + Int(gamein3)!
-                            averageCount = 0 + 1
+                        if Int(gamein3) != 0{
+                            average3 += Int(gamein3)!
+                            averageCount += 1
                         }
-                       average3 = average3 / averageCount
+                        if averageCount > 0 {
+                            average3 = average3 / averageCount   
+                        }
+                       
                         average = String(average3)
                     }
                     let maxnum = max(Int(gamein1)! , Int(gamein2)!, Int(gamein3)!)
